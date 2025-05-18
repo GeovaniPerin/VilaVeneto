@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vila Veneto - Porções Italianas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="icon" href="images/logo_vila.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div class="cabecalho">
+
+            <div>
+                <img src="images/Topo.jpeg">
+      
+        </div>
+    </div>
+
+    <div class="menu">
+        <h2>Cardápio</h2>
+        
+        <div class="categoria">
+            <h3>Porções Italianas</h3>
+            <div class="itens">
+                <!-- Porção 1 -->
+                <div class="item">
+                    <img src="images/bruschetta.jpg" class="foto-prato" loading="lazy">
+                    <h4>Bruschetta</h4>
+                    <p>Pão italiano torrado com tomate, manjericão e azeite</p>
+                    <p class="preco">R$ 25,00</p>
+                    <button class="botao-adicionar" data-item="Bruschetta" data-preco="25">+ Adicionar</button>
+                </div>
+                
+                <!-- Porção 2 -->
+                <div class="item">
+                    <img src="images/polenta.jpg" class="foto-prato" loading="lazy">
+                    <h4>Polenta Frita</h4>
+                    <p>Polenta cortada em bastões e frita crocante</p>
+                    <p class="preco">R$ 22,00</p>
+                    <button class="botao-adicionar" data-item="Polenta Frita" data-preco="22">+ Adicionar</button>
+                </div>
+                
+                <!-- Porção 3 -->
+                <div class="item">
+                    <img src="images/arancini.jpg" class="foto-prato" loading="lazy">
+                    <h4>Bolinho de Arancini</h4>
+                    <p>Bolinhos de risoto crocantes por fora e cremosos por dentro</p>
+                    <p class="preco">R$ 28,00</p>
+                    <button class="botao-adicionar" data-item="Bolinho de Arancini" data-preco="28">+ Adicionar</button>
+                </div>
+                
+                <!-- Porção 4 -->
+                <div class="item">
+                    <img src="images/antipasto.jpg" class="foto-prato" loading="lazy">
+                    <h4>Antipasto Italiano</h4>
+                    <p>Seleção de frios, queijos e vegetais em conserva</p>
+                    <p class="preco">R$ 35,00</p>
+                    <button class="botao-adicionar" data-item="Antipasto Italiano" data-preco="35">+ Adicionar</button>
+                </div>
+                
+                <!-- Porção 5 -->
+                <div class="item">
+                    <img src="images/gnocchi.jpg" class="foto-prato" loading="lazy">
+                    <h4>Gnocchi Frito</h4>
+                    <p>Massa de batata frita com molho de queijo</p>
+                    <p class="preco">R$ 30,00</p>
+                    <button class="botao-adicionar" data-item="Gnocchi Frito" data-preco="30">+ Adicionar</button>
+                </div>
+                
+                <!-- Porção 6 -->
+                <div class="item">
+                    <img src="images/caprese.jpg" class="foto-prato" loading="lazy">
+                    <h4>Salada Caprese</h4>
+                    <p>Tomate, mussarela de búfala e manjericão</p>
+                    <p class="preco">R$ 32,00</p>
+                    <button class="botao-adicionar" data-item="Salada Caprese" data-preco="32">+ Adicionar</button>
+                </div>
+                
+                <!-- Porção 7 -->
+                <div class="item">
+                    <img src="images/berinjela.jpg" class="foto-prato" loading="lazy">
+                    <h4>Berenjela à Parmegiana</h4>
+                    <p>Berenjela empanada com molho de tomate e queijo</p>
+                    <p class="preco">R$ 28,00</p>
+                    <button class="botao-adicionar" data-item="Berenjela à Parmegiana" data-preco="28">+ Adicionar</button>
+                </div>
+                
+                <!-- Porção 8 -->
+                <div class="item">
+                    <img src="images/calamari.jpg" class="foto-prato" loading="lazy">
+                    <h4>Calamari Frito</h4>
+                    <p>Lula empanada e frita com limão siciliano</p>
+                    <p class="preco">R$ 38,00</p>
+                    <button class="botao-adicionar" data-item="Calamari Frito" data-preco="38">+ Adicionar</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="categoria">
+            <h3>Bebidas</h3>
+            <div class="itens">
+                <!-- Bebida 1 -->
+                <div class="item">
+                    <img src="images/agua.jpg" class="foto-prato" loading="lazy">
+                    <h4>Água Mineral</h4>
+                    <p>Garrafa de 500ml</p>
+                    <p class="preco">R$ 5,00</p>
+                    <button class="botao-adicionar" data-item="Água Mineral 500ml" data-preco="5">+ Adicionar</button>
+                </div>
+                
+                <!-- Bebida 2 -->
+                <div class="item">
+                    <img src="images/agua-gas.jpg" class="foto-prato" loading="lazy">
+                    <h4>Água com Gás</h4>
+                    <p>Garrafa de 500ml</p>
+                    <p class="preco">R$ 6,00</p>
+                    <button class="botao-adicionar" data-item="Água com Gás 500ml" data-preco="6">+ Adicionar</button>
+                </div>
+                
+                <!-- Bebida 3 -->
+                <div class="item">
+                    <img src="images/refri.jpg" class="foto-prato" loading="lazy">
+                    <h4>Refrigerante 350ml</h4>
+                    <p>Lata 350ml</p>
+                    <p class="preco">R$ 6,00</p>
+                    <button class="botao-adicionar" data-item="Refrigerante 350ml" data-preco="6">+ Adicionar</button>
+                </div>
+                
+                <!-- Bebida 4 -->
+                <div class="item">
+                    <img src="images/refri-600.jpg" class="foto-prato" loading="lazy">
+                    <h4>Refrigerante 600ml</h4>
+                    <p>Garrafa 600ml</p>
+                    <p class="preco">R$ 8,00</p>
+                    <button class="botao-adicionar" data-item="Refrigerante 600ml" data-preco="8">+ Adicionar</button>
+                </div>
+                
+                <!-- Bebida 5 -->
+                <div class="item">
+                    <img src="images/refri-1l.jpg" class="foto-prato" loading="lazy">
+                    <h4>Refrigerante 1L</h4>
+                    <p>Garrafa 1 litro</p>
+                    <p class="preco">R$ 10,00</p>
+                    <button class="botao-adicionar" data-item="Refrigerante 1L" data-preco="10">+ Adicionar</button>
+                </div>
+                
+                <!-- Bebida 6 -->
+                <div class="item">
+                    <img src="images/refri-2l.jpg" class="foto-prato" loading="lazy">
+                    <h4>Refrigerante 2L</h4>
+                    <p>Garrafa 2 litros</p>
+                    <p class="preco">R$ 12,00</p>
+                    <button class="botao-adicionar" data-item="Refrigerante 2L" data-preco="12">+ Adicionar</button>
+                </div>
+                
+                <!-- Bebida 7 -->
+                <div class="item">
+                    <img src="images/suco.jpg" class="foto-prato" loading="lazy">
+                    <h4>Suco Natural</h4>
+                    <p>Copo 300ml - sabores: laranja, abacaxi ou maracujá</p>
+                    <p class="preco">R$ 8,00</p>
+                    <button class="botao-adicionar" data-item="Suco Natural 300ml" data-preco="8">+ Adicionar</button>
+                </div>
+                
+                <!-- Bebida 8 -->
+                <div class="item">
+                    <img src="images/limonada.jpg" class="foto-prato" loading="lazy">
+                    <h4>Limonada Siciliana</h4>
+                    <p>Limonada com raspas de limão siciliano</p>
+                    <p class="preco">R$ 10,00</p>
+                    <button class="botao-adicionar" data-item="Limonada Siciliana" data-preco="10">+ Adicionar</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mapa de Localização -->
+        <div class="categoria">
+            <h3>Localização</h3>
+            <div id="mapa"></div>
+            <p class="endereco">Av. Principal, 123 - Centro</p>
+        </div>
+    </div>
+
+    <!-- Carrinho de Compras -->
+    <div class="carrinho" id="carrinho">
+        <button class="fechar-carrinho" onclick="toggleCarrinho()">×</button>
+        <h3>Seu Pedido <span id="quantidade-itens">(0 itens)</span></h3>
+        <div id="itens-carrinho"></div>
+        <div class="observacoes">
+            <textarea id="observacoes-pedido" placeholder="Alguma observação sobre seu pedido?"></textarea>
+        </div>
+        <div class="total" id="total-carrinho">Total: R$ 0,00</div>
+        <button id="finalizar-pedido" disabled>Finalizar Pedido via WhatsApp</button>
+    </div>
+
+    <div class="rodape">
+        <p>Telefone: <a href="tel:+5517991197731">(17) 99119-7731</a></p>
+        <p>Av. Principal, 123 - Centro</p>
+    </div>
+
+    <!-- Botão Flutuante do Carrinho -->
+    <div class="botao-carrinho-flutuante" onclick="toggleCarrinho()">
+        🛒
+        <div class="contador-carrinho" id="contador-carrinho">0</div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Carrinho de compras
+        let carrinho = [];
+        const carrinhoElement = document.getElementById('carrinho');
+        
+        // Mostrar/ocultar carrinho
+        function toggleCarrinho() {
+            carrinhoElement.classList.toggle('ativo');
+            atualizarContadorFlutuante();
+        }
+        
+        // Atualizar contador flutuante
+        function atualizarContadorFlutuante() {
+            const contador = document.getElementById('contador-carrinho');
+            contador.textContent = carrinho.length;
+            contador.style.display = carrinho.length > 0 ? 'flex' : 'none';
+        }
+        
+        // Adicionar item ao carrinho
+        document.querySelectorAll('.botao-adicionar').forEach(botao => {
+            botao.addEventListener('click', function() {
+                const item = this.getAttribute('data-item');
+                const preco = parseFloat(this.getAttribute('data-preco'));
+                
+                // Efeito visual
+                this.classList.add('clicado');
+                setTimeout(() => this.classList.remove('clicado'), 200);
+                
+                // Adiciona ao carrinho
+                carrinho.push({ item, preco });
+                atualizarCarrinho();
+                
+                // Mostra o carrinho se estiver oculto
+                if (!carrinhoElement.classList.contains('ativo')) {
+                    carrinhoElement.classList.add('ativo');
+                }
+            });
+        });
+        
+        // Atualizar visualização do carrinho
+        function atualizarCarrinho() {
+            const itensCarrinho = document.getElementById('itens-carrinho');
+            const totalCarrinho = document.getElementById('total-carrinho');
+            const quantidadeItens = document.getElementById('quantidade-itens');
+            const btnFinalizar = document.getElementById('finalizar-pedido');
+            
+            itensCarrinho.innerHTML = '';
+            let total = 0;
+            
+            // Agrupar itens iguais
+            const itensAgrupados = {};
+            carrinho.forEach(produto => {
+                if (!itensAgrupados[produto.item]) {
+                    itensAgrupados[produto.item] = {
+                        quantidade: 1,
+                        preco: produto.preco
+                    };
+                } else {
+                    itensAgrupados[produto.item].quantidade++;
+                }
+                total += produto.preco;
+            });
+            
+            // Mostrar itens no carrinho
+            for (const item in itensAgrupados) {
+                const divItem = document.createElement('div');
+                divItem.className = 'item-carrinho';
+                divItem.innerHTML = `
+                    <span>${itensAgrupados[item].quantidade}x ${item}</span>
+                    <span>R$ ${(itensAgrupados[item].preco * itensAgrupados[item].quantidade).toFixed(2)}</span>
+                    <button class="remover-item" data-item="${item}">×</button>
+                `;
+                itensCarrinho.appendChild(divItem);
+            }
+            
+            totalCarrinho.textContent = `Total: R$ ${total.toFixed(2)}`;
+            quantidadeItens.textContent = `(${carrinho.length} ${carrinho.length === 1 ? 'item' : 'itens'})`;
+            btnFinalizar.disabled = carrinho.length === 0;
+            
+            // Atualizar contador flutuante
+            atualizarContadorFlutuante();
+            
+            // Adicionar eventos para remover itens
+            document.querySelectorAll('.remover-item').forEach(botao => {
+                botao.addEventListener('click', function() {
+                    const item = this.getAttribute('data-item');
+                    const index = carrinho.findIndex(produto => produto.item === item);
+                    if (index !== -1) {
+                        carrinho.splice(index, 1);
+                        atualizarCarrinho();
+                    }
+                });
+            });
+        }
+        
+        // Finalizar pedido via WhatsApp
+        document.getElementById('finalizar-pedido').addEventListener('click', function() {
+            if (carrinho.length === 0) return;
+            
+            // Formatar mensagem
+            let mensagem = 'Olá Vila Veneto, gostaria de pedir:\n\n';
+            const itensAgrupados = {};
+            let total = 0;
+            
+            carrinho.forEach(produto => {
+                if (!itensAgrupados[produto.item]) {
+                    itensAgrupados[produto.item] = {
+                        quantidade: 1,
+                        preco: produto.preco
+                    };
+                } else {
+                    itensAgrupados[produto.item].quantidade++;
+                }
+                total += produto.preco;
+            });
+            
+            for (const item in itensAgrupados) {
+                mensagem += `${itensAgrupados[item].quantidade}x ${item} - R$ ${(itensAgrupados[item].preco * itensAgrupados[item].quantidade).toFixed(2)}\n`;
+            }
+            
+            // Adicionar observações se existirem
+            const observacoes = document.getElementById('observacoes-pedido').value;
+            if (observacoes.trim() !== '') {
+                mensagem += `\nObservações: ${observacoes}\n`;
+            }
+            
+            mensagem += `\nTotal: R$ ${total.toFixed(2)}\n\n`;
+            mensagem += 'Obrigado!';
+            
+            // Número do WhatsApp
+            const whatsappLink = `https://wa.me/5517991197731?text=${encodeURIComponent(mensagem)}`;
+            window.open(whatsappLink, '_blank');
+        });
+        
+        // Mapa
+        function initMap() {
+            const mapa = L.map('mapa').setView([-20.917964, -49.448860], 16);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mapa);
+            
+            L.marker([-20.917964, -49.448860]).addTo(mapa)
+                .bindPopup('Vila Veneto<br>Av. Principal, 123')
+                .openPopup();
+        }
+        
+        // Inicializar quando a página carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            initMap();
+            atualizarContadorFlutuante();
+        });
+    </script>
+</body>
+</html>
